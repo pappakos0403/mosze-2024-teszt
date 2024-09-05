@@ -4,21 +4,21 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; //elírt változónév
-    std::cout << '1-100 ertekek duplazasa' //nincs ;
-    for (int i = 0;) //hiányos for loop
+    int *b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa" << std::endl;
+    for (int i = 0; i < N_ELEMENTS; i++) 
     {
         b[i] = i * 2;
     }
-    for (int i = 0; i; i++) //hiányos for loop
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:" //nincs ;
+        std::cout << "Ertek:" << b[i] << std::endl;
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag; //nincs kezdőérték
-    for (int i = 0; i < N_ELEMENTS, i++) //, helyett ;
+    int atlag = 0;
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        atlag += b[i] //nincs ;
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
